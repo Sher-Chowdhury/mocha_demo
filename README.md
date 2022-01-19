@@ -321,3 +321,12 @@ running hook
 
   2 passing (5ms)
 ```
+
+There are a few hooks avaiable:
+
+- before
+- after
+- beforeEach
+- afterEach
+
+see - https://mochajs.org/#hooks and https://mochajs.org/#available-root-hooks
