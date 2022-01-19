@@ -277,5 +277,24 @@ Side note: you can use `describe.only()` and `describe.skip()` to control what g
 
 now use branch chai3
 
+here we can see how to test the add function. 
+
+```
+$ npm test
+
+> mocha_demo@1.0.0 test /Users/sherchowdhury/github/mocha_demo
+> mocha "*/**/*Test.js"
+
+
+
+  testing maths function
+    ✔ success scenario
+    ✔ failure scenario
+
+
+  2 passing (4ms)
+
+```
+
 
 
