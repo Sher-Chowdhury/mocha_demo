@@ -178,3 +178,49 @@ Here are some examples - https://github.com/mochajs/mocha/tree/master/example/co
 
 now look at "chai1" branch. 
 
+## The Chai assertion Library
+
+install chai:
+
+```
+$ npm install -D chai
+```
+
+This install the dev dependencies, and updates the packages.json. 
+
+
+Next you have to require chai before you can use it:
+
+```
+const expect = require('chai').expect 
+
+describe("testing function xxxx", () => {
+
+	it("testing correct number of paramers passed in", () => {
+		let result = true
+		expect(result).to.be.true
+
+	})	
+
+})
+```
+
+This outputs:
+
+```
+$ npm test
+
+> mocha_demo@1.0.0 test /Users/sherchowdhury/github/mocha_demo
+> mocha "*/**/*Test.js"
+
+
+
+  testing function xxxx
+    ✔ testing correct number of paramers passed in
+
+
+  1 passing (4ms)
+
+```
+
+
