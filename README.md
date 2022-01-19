@@ -223,4 +223,5 @@ $ npm test
 
 ```
 
+now switch to branch chai2
 
