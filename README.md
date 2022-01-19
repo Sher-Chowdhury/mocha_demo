@@ -192,6 +192,7 @@ This install the dev dependencies, and updates the packages.json.
 Next you have to require chai before you can use it:
 
 ```
+$ cat indexTest.js
 const expect = require('chai').expect 
 
 describe("testing function xxxx", () => {
@@ -225,3 +226,48 @@ $ npm test
 
 now switch to branch chai2
 
+The also offers alernatives to "expect", they also offer "should" and "assert".
+
+They are all actually equivalent to each other, the only difference being that the syntax is slightly different. 
+
+So it's a matter of personal preference on which syntax you use. Here's a side by sid comparisons of these syntaxes:
+
+```
+$ cat indexTest.js
+
+const expect = require('chai').expect 
+const should = require('chai').should()    // notice we use '()' here. 
+const assert = require('chai').assert 
+
+describe("testing function xxxx", () => {
+
+	it("testing correct number of paramers passed in", () => {
+		let result = true
+
+		expect(result).to.be.true
+
+		result.should.be.true
+
+		assert.isTrue(result)
+
+	})	
+
+})
+```
+
+This outputs:
+
+```
+$ npm test
+
+> mocha_demo@1.0.0 test /Users/sherchowdhury/github/mocha_demo
+> mocha "*/**/*Test.js"
+
+
+
+  testing function xxxx
+    ✔ testing correct number of paramers passed in
+
+
+  1 passing (4ms)
+```
