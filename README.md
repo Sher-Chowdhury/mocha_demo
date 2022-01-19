@@ -168,7 +168,6 @@ npm ERR! Test failed.  See above for more details.
 
 ```
 
-
 Configuring mocha - you can configure mocha by creating config files, or adding a "mocha" section inside the package.json file - https://mochajs.org/#configuring-mocha-nodejs
 
 Note: configuring using the `.mocharc.js` is the more powerful way of doing this because you can code in some logic to it. 
@@ -271,3 +270,8 @@ $ npm test
 
   1 passing (4ms)
 ```
+
+
+Side note: you can use `describe.only()` and `describe.skip()` to control what get's run during `npm test`. Similarly you have `it.only()` and `it.skip()` - see https://mochajs.org/#exclusive-tests and https://mochajs.org/#inclusive-tests
+
+
