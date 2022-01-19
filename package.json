@@ -1,0 +1,24 @@
+{
+  "name": "mocha_demo",
+  "version": "1.0.0",
+  "description": "Just some mocha examples.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"*/**/*Test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sher-Chowdhury/mocha_demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sher-Chowdhury/mocha_demo/issues"
+  },
+  "homepage": "https://github.com/Sher-Chowdhury/mocha_demo#readme",
+  "devDependencies": {
+    "mocha": "^9.1.4",
+    "nyc": "^15.1.0"
+  }
+}
