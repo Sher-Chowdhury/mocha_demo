@@ -296,5 +296,28 @@ $ npm test
 
 ```
 
+now switch to hooks1 branch. 
 
 
+https://mochajs.org/#available-root-hooks
+
+mocha hooks lets you run some code before and after it-blocks. 
+
+
+```
+$ npm test
+
+> mocha_demo@1.0.0 test /Users/sherchowdhury/github/mocha_demo
+> mocha "*/**/*Test.js"
+
+
+
+  testing maths function
+running hook
+    ✔ success scenario
+running hook
+    ✔ failure scenario
+
+
+  2 passing (5ms)
+```

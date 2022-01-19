@@ -3,6 +3,11 @@ const add = require("../maths").add      // you need to load in the function
 
 describe("testing maths function", () => {
 
+	
+	beforeEach(() => {
+		console.log("running hook")
+	})
+
 	it("success scenario", () => {
 		let result = add(2,8)
 		expect(result).to.eq(10)
