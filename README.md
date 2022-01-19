@@ -122,3 +122,59 @@ these shorthands only work because a scripts name of "test" has special meaning 
 
 As you can this can also in turn run `pretest` and `posttest`, if they exist. 
 
+
+now see the eg1 branch. 
+
+
+Rewrote indexTest.js with some sample tests, using the describe() and it() block syntaxes. These syntaxes were globally introduced by install mocha. So no need to require mocha. 
+
+Now the output looks like:
+
+```
+$ npm test
+
+> mocha_demo@1.0.0 test /Users/sherchowdhury/github/mocha_demo
+> mocha "*/**/*Test.js"
+
+
+
+  testing function xxxx
+early sanity check
+    ✔ testing correct number of paramers passed in
+    testing success flows
+pass1
+      ✔ testing success scenario 1
+      1) testing success scenario 2
+    testing error flows
+error1
+      ✔ testing error scenario 1
+error2
+      ✔ testing error scenario 2
+
+
+  4 passing (7ms)
+  1 failing
+
+  1) testing function xxxx
+       testing success flows
+         testing success scenario 2:
+     Error: expected success, but got a failure
+      at Context.<anonymous> (test/indexTest.js:13:10)
+      at processImmediate (internal/timers.js:464:21)
+
+
+
+npm ERR! Test failed.  See above for more details.
+
+```
+
+
+Configuring mocha - you can configure mocha by creating config files, or adding a "mocha" section inside the package.json file - https://mochajs.org/#configuring-mocha-nodejs
+
+Note: configuring using the `.mocharc.js` is the more powerful way of doing this because you can code in some logic to it. 
+
+Here are some examples - https://github.com/mochajs/mocha/tree/master/example/config
+
+
+now look at "chai1" branch. 
+
