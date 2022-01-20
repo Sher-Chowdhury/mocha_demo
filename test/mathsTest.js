@@ -1,24 +1,23 @@
 const expect = require('chai').expect 
-const add = require("../maths").add      // you need to load in the function
 
 describe("testing maths function", () => {
 
 	
-	beforeEach(() => {
-		console.log("running hook")
-	})
+	let var1 = ['apple', 'oranges', 'bananas']
+	let var2 = ['apple', 'oranges', 'bananas']
 
-	it("success scenario", () => {
-		let result = add(2,8)
-		expect(result).to.eq(10)
+
+
+	it("identity testing comparison", () => {
+		// this fails because eq cant properly compare composite date types (e.g. arrays) so it resorts to
+		// doing a comparing memory pointer value (identity testing)
+		expect(var1).to.eq(var2)
 	})
 	
-	it("failure scenario", () => {
-		
-		// Here we don't want to check the return value (since we're not expecting a return value), instead we want to 
-		// test the exit code of the function itself. This is done by wrapping the add() call inside an arrow function and then 
-		// put that arrow function inside  expect(arrowFunction)
-		expect(() => {add(2,"xxx")}).to.throw
+	it("deep comparison testing", () => {
+		// this test passes because it's doing a deep comparison, to see if all the underlying primitive data-type
+		// based values matches. 
+		expect(var1).to.eql(var2)
 	})	
 
 })
