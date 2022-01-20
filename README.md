@@ -330,3 +330,25 @@ There are a few hooks avaiable:
 - afterEach
 
 see - https://mochajs.org/#hooks and https://mochajs.org/#available-root-hooks
+
+
+```
+$ npm test
+
+> mocha_demo@1.0.0 test /Users/sherchowdhury/github/mocha_demo
+> mocha "*/**/*Test.js"
+
+
+
+  testing maths function
+running hook
+    ✔ success scenario
+running hook
+    ✔ failure scenario
+
+
+  2 passing (5ms)
+
+```
+
+Now switch to deep-comparison branch 
