@@ -388,4 +388,7 @@ npm ERR! Test failed.  See above for more details.
 ```
 
 
-change branch to testing-async-code
+now change branch to testing-async-code
+
+
+testing async code is a litter harder, that's because you want to ensure your function/method under test finishes running before your `expect` statements run.   
