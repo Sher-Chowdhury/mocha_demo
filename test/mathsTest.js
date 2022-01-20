@@ -9,7 +9,7 @@ describe("testing maths function", () => {
 	it("success scenario", done => {
 
 
-		// This time our callback can accept two parameters, the first being an error. 
+		// This time our callback can accept two parameters, the first parameter being an error, if any. 
 		// this means that this test is now testing for 3 things:
 		// 1. The add() function run's successfully without throwing an error - hence we don't trigger done('blahblah')
 		// 2. the add() function does end up calling the callback function that's been passed into it. 
