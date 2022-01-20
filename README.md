@@ -395,3 +395,21 @@ testing async code is a litter harder, that's because you want to ensure your fu
 
 
 now change branch to testing-async-code1
+
+If a function is allowed to accept an error argument as one of it's input parameter, then by convention, it's supposed to accept that 
+error value as it's first input. 
+
+The mocha's built in done() function is designed to accept an error as it's first argument. Hence when the following line 
+executes, it won't cause the test to fail:
+
+```
+done()
+```
+
+However the following will cause the test to fail:
+
+```
+done("Fail: Something went wrong")
+```
+
+see the comments in the example. 
