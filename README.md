@@ -351,4 +351,38 @@ running hook
 
 ```
 
-Now switch to deep-comparison branch 
+Now switch to deep-comparison branch. 
+
+
+when comparing composite data types, use "eql", but when comparing primitive data types, use "eq"
+
+```
+npm test
+
+> mocha_demo@1.0.0 test /Users/sherchowdhury/github/mocha_demo
+> mocha "*/**/*Test.js"
+
+
+
+  testing maths function
+    1) identity testing comparison
+    ✔ deep comparison testing
+
+
+  1 passing (7ms)
+  1 failing
+
+  1) testing maths function
+       identity testing comparison:
+
+      AssertionError: expected [ 'apple', 'oranges', 'bananas' ] to equal [ 'apple', 'oranges', 'bananas' ]
+      + expected - actual
+
+
+      at Context.<anonymous> (test/mathsTest.js:14:19)
+      at processImmediate (internal/timers.js:464:21)
+
+
+
+npm ERR! Test failed.  See above for more details.
+```
